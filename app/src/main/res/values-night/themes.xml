@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.MyApp" parent="Theme.Material3.Dark.NoActionBar">
+<resources >
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">#BB86FC</item>
         <item name="colorPrimaryVariant">#3700B3</item>
         <item name="colorOnPrimary">#000000</item>
-        <!-- Tambahkan atribut lainnya -->
+        <item name="android:colorBackground">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>
+
