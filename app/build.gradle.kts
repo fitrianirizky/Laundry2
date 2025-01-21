@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.rizky.laundry2"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.rizky.laundry2"
