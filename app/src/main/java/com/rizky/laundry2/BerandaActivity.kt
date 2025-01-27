@@ -28,6 +28,7 @@ class BerandaActivity : AppCompatActivity() {
     fun init(){
         tvSapa=findViewById(R.id.tvSapa)
         tvTanggal=findViewById(R.id.tvTanggal)
+
     }
 
     fun getGreeting(): String{

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Laundry2</string>
+    <string-array name="status">
+        <item>Tetap</item>
+        <item>Kontrak</item>
+        <item>Freelance</item>
+    </string-array>
+
+
 </resources>
