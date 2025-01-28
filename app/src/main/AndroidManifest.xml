@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
         <activity
+            android:name=".tambahan.TambahTambahanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tambahan.DataTambahanActivity"
+            android:exported="false" />
+        <activity
             android:name=".cabang.TambahCabangActivity"
             android:exported="false" />
         <activity
