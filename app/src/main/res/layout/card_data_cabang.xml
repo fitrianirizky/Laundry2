@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCARD_CABANG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNO_CABANG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Cabang"
+            android:textSize="14sp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/tvNAMA_CABANG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Cabang"
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/tvALAMAT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat Lengkap"
+            android:textSize="15sp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/tvJAM_OPERASIONAL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jam Operasional"
+            android:textSize="15sp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/tvNO_HP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Telepon Cabang"
+            android:textSize="15sp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/tvLAYANAN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Layanan Cabang"
+            android:textSize="15sp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Hubungi"
+                android:textSize="15sp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"/>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Lihat"
+                android:textSize="15sp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
