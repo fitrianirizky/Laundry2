@@ -6,5 +6,26 @@
         <item>Freelance</item>
     </string-array>
 
+    <string-array name="layanan">
+        <item>Cuci Kering</item>
+        <item>Cuci Basah</item>
+        <item>Setrika</item>
+        <item>Cuci Kering Setrika</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="pilihan">
+        <item>Antar Jemput</item>
+        <item>Express Service</item>
+        <item>Custom atau Tambahan</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="pesanan">
+        <item>Proses</item>
+        <item>Selesai</item>
+        <item>Sudah diantar</item>
+    </string-array>
+
 
 </resources>
