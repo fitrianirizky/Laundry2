@@ -21,27 +21,12 @@ import java.time.format.DateTimeFormatter
 class BerandaActivity : AppCompatActivity() {
     lateinit var tvSapa : TextView
     lateinit var tvTanggal : TextView
-    lateinit var cvTambahan : CardView
-    lateinit var cvLayanan : CardView
-    lateinit var cvAkun : CardView
-    lateinit var cvPegawai : CardView
-    lateinit var cvCabang : CardView
-    lateinit var cvPrinter : CardView
-    lateinit var cvTransaksi : CardView
-    lateinit var cvPelanggan : CardView
-    lateinit var cvLaporan : CardView
-    lateinit var ivTransaksi : ImageView
-    lateinit var ivPelanggan : ImageView
-    lateinit var ivLaporan : ImageView
-    lateinit var ivAkun : ImageView
-    lateinit var ivCabang : ImageView
-    lateinit var ivPegawai : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_beranda)
         init()
-        pencet()
         tvSapa.text = getGreeting()
         tvTanggal.text = getCurrentDate()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -53,71 +38,6 @@ class BerandaActivity : AppCompatActivity() {
     fun init(){
         tvSapa=findViewById(R.id.tvSapa)
         tvTanggal=findViewById(R.id.tvTanggal)
-        cvTambahan=findViewById(R.id.cvTambahan)
-        cvLayanan=findViewById(R.id.cvLayanan)
-    }
-
-    fun pencet(){
-        cvTambahan.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataTambahanActivity::class.java)
-            startActivity(intent)
-        }
-        cvLayanan.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        cvAkun.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        cvCabang.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataCabangActivity::class.java)
-            startActivity(intent)
-        }
-        cvPelanggan.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataPelangganActivity::class.java)
-            startActivity(intent)
-        }
-        cvPegawai.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataPegawaiActivity::class.java)
-            startActivity(intent)
-        }
-        cvPrinter.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        cvTransaksi.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        cvLaporan.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        ivAkun.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        ivCabang.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataCabangActivity::class.java)
-            startActivity(intent)
-        }
-        ivPelanggan.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataPelangganActivity::class.java)
-            startActivity(intent)
-        }
-        ivPegawai.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataPegawaiActivity::class.java)
-            startActivity(intent)
-        }
-        ivTransaksi.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
-        ivLaporan.setOnClickListener {
-            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
-            startActivity(intent)
-        }
 
     }
 

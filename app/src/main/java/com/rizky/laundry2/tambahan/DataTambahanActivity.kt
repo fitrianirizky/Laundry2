@@ -11,13 +11,12 @@ import com.rizky.laundry2.R
 import com.rizky.laundry2.cabang.TambahCabangActivity
 
 class DataTambahanActivity : AppCompatActivity() {
-    lateinit var rvDATA_TAMBAHAN : RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_data_tambahan)
-        init()
-        pencet()
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -25,13 +24,5 @@ class DataTambahanActivity : AppCompatActivity() {
         }
     }
 
-    fun init(){
-        rvDATA_TAMBAHAN=findViewById(R.id.rvDATA_TAMBAHAN)
-    }
-    fun pencet() {
-        rvDATA_TAMBAHAN.setOnClickListener {
-            val intent = Intent(this@DataTambahanActivity, TambahTambahanActivity::class.java)
-            startActivity(intent)
-        }
-    }
+
 }
