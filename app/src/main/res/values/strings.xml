@@ -26,6 +26,30 @@
         <item>Selesai</item>
         <item>Sudah diantar</item>
     </string-array>
+    <string name="tvCARD_PELANGGAN_ID">ID Pelanggan</string>
+    <string name="tvCARD_PELANGGAN_NAMA">Nama Pelanggan</string>
+    <string name="tvCARD_PELANGGAN_ALAMAT">"Alamat "</string>
+    <string name="tvCARD_PELANGGAN_NOHP">"No Hp "</string>
+    <string name="btCARD_PELANGGAN_HUBUNGI">"Hubungi "</string>
+    <string name="btCARD_PELANGGAN_LIHAT">"Lihat "</string>
+    <string name="tvCARD_PEGAWAI_ID">"ID Pegawai "</string>
+    <string name="tvCARD_PEGAWAI_NAMA">Nama Pegawai</string>
+    <string name="tvCARD_PEGAWAI_ALAMAT">"Alamat "</string>
+    <string name="tvCARD_PEGAWAI_NOHP">Telepon</string>
+    <string name="tvCARD_PEGAWAI_CABANG">"Cabang "</string>
+    <string name="tvCARD_PEGAWAI_JABATAN">"Jabatan "</string>
+    <string name="btCARD_PEGAWAI_HUBUNGI">"Hubungi "</string>
+    <string name="btCARD_PEGAWAI_LIHAT">"Lihat "</string>
+    <string name="tvTAMBAH_PELANGGAN">Tambah Pelanggan</string>
+    <string name="tvTAMBAH_NAMA_PELANGGAN">Nama Pelanggan</string>
+    <string name="etTAMBAH_NAMA_PELANGGAN">Nama Pelanggan</string>
+    <string name="tvTAMBAH_ALAMAT_PELANGGAN">"Alamat "</string>
+    <string name="etTAMBAH_ALAMAT_PELANGGAN">"Alamat "</string>
+    <string name="tvTAMBAH_NOHP_PELANGGAN">"Telepon "</string>
+    <string name="etTAMBAH_NOHP_PELANGGAN">Telepon</string>
+    <string name="tvTAMBAH_CABANG_PELANGGAN">"Cabang "</string>
+    <string name="etTAMBAH_CABANG_PELANGGAN">"Cabang "</string>
+    <string name="btTAMBAH_SIMPAN_PELANGGAN">"Simpan "</string>
 
 
 </resources>

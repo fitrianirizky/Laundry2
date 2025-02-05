@@ -8,10 +8,10 @@
     tools:context=".pelanggan.TambahPelangganActivity">
 
     <TextView
-        android:id="@+id/tvTambah_Pelanggan"
+        android:id="@+id/tvTAMBAH_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TAMBAH PELANGGAN"
+        android:text="@string/tvTAMBAH_PELANGGAN"
         android:textAlignment="center"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -23,26 +23,26 @@
         android:layout_marginEnd="15dp" />
 
     <TextView
-        android:id="@+id/tvNama_Lengkap"
+        android:id="@+id/tvTAMBAH_NAMA_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama Lengkap"
+        android:text="@string/tvTAMBAH_NAMA_PELANGGAN"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTambah_Pelanggan"
+        app:layout_constraintTop_toBottomOf="@id/tvTAMBAH_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="15dp"/>
 
     <EditText
-        android:id="@+id/etNama_Lengkap"
+        android:id="@+id/etTAMBAH_NAMA_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Lengkap"
+        android:hint="@string/etTAMBAH_NAMA_PELANGGAN"
         android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNama_Lengkap"
+        app:layout_constraintTop_toBottomOf="@id/tvTAMBAH_NAMA_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
@@ -50,64 +50,92 @@
         android:background="@drawable/border"/>
 
     <TextView
-        android:id="@+id/tvAlamat"
+        android:id="@+id/tvTAMBAH_ALAMAT_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alamat"
-        android:textSize="16dp"
+        android:text="@string/tvTAMBAH_ALAMAT_PELANGGAN"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etNama_Lengkap"
+        app:layout_constraintTop_toBottomOf="@id/etTAMBAH_NAMA_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"/>
 
     <EditText
-        android:id="@+id/etAlamat"
+        android:id="@+id/etTAMBAH_ALAMAT_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Alamat"
+        android:hint="@string/etTAMBAH_ALAMAT_PELANGGAN"
         android:background="@drawable/border"
         android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvAlamat"
+        app:layout_constraintTop_toBottomOf="@id/tvTAMBAH_ALAMAT_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"/>
 
     <TextView
-        android:id="@+id/tvNo_HP"
+        android:id="@+id/tvTAMBAH_NOHP_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No HP Aktif"
-        android:textSize="16dp"
+        android:text="@string/tvTAMBAH_NOHP_PELANGGAN"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etAlamat"
+        app:layout_constraintTop_toBottomOf="@id/etTAMBAH_ALAMAT_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"/>
 
     <EditText
-        android:id="@+id/etNo_HP"
+        android:id="@+id/etTAMBAH_NOHP_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="No HP Aktif"
+        android:hint="@string/etTAMBAH_NOHP_PELANGGAN"
         android:background="@drawable/border"
         android:padding="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNo_HP"
+        app:layout_constraintTop_toBottomOf="@id/tvTAMBAH_NOHP_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"/>
-    <Button
+
+    <TextView
+        android:id="@+id/tvTAMBAH_CABANG_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan"
+        android:text="@string/tvTAMBAH_CABANG_PELANGGAN"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etNo_HP"
+        app:layout_constraintTop_toBottomOf="@id/etTAMBAH_NOHP_PELANGGAN"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <EditText
+        android:id="@+id/etTAMBAH_CABANG_PELANGGAN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/etTAMBAH_CABANG_PELANGGAN"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTAMBAH_CABANG_PELANGGAN"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/border"/>
+    <Button
+        android:id="@+id/btTAMBAH_SIMPAN_PELANGGAN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btTAMBAH_SIMPAN_PELANGGAN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTAMBAH_CABANG_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"

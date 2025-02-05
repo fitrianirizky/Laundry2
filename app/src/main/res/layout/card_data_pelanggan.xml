@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvCARD_PELANGGAN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         app:cardCornerRadius="15dp"
         android:layout_margin="5dp"
         android:layout_marginTop="5dp"
@@ -24,46 +20,38 @@
                 android:id="@+id/tvCARD_PELANGGAN_ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ID Pelanggan"
+                android:text="@string/tvCARD_PELANGGAN_ID"
                 android:textSize="14sp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="5dp"
-                android:layout_margin="5dp"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
             <TextView
-                android:id="@+id/tvNAMA_PELANGGAN"
+                android:id="@+id/tvCARD_PELANGGAN_NAMA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama Pelanggan"
+                android:text="@string/tvCARD_PELANGGAN_NAMA"
                 android:textSize="16sp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="5dp"
-                android:layout_margin="5dp"/>
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
             <TextView
-                android:id="@+id/tvALAMAT"
+                android:id="@+id/tvCARD_PELANGGAN_ALAMAT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alamat"
-                android:textSize="15sp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="5dp"
-                android:layout_margin="5dp"/>
+                android:text="@string/tvCARD_PELANGGAN_ALAMAT"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
             <TextView
-                android:id="@+id/tvNO_HP"
+                android:id="@+id/tvCARD_PELANGGAN_NOHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No HP"
-                android:textSize="15sp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="5dp"
-                android:layout_margin="5dp"/>
+                android:text="@string/etTAMBAH_NOHP_PELANGGAN"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,30 +59,26 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_width="190dp"
+                    android:id="@+id/btCARD_PELANGGAN_HUBUNGI"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:text="Hubungi"
+                    android:text="@string/btCARD_PELANGGAN_HUBUNGI"
                     android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="5dp"
                     android:textAllCaps="false"/>
                 <Button
-                    android:layout_width="190dp"
+                    android:id="@+id/btCARD_PELANGGAN_LIHAT"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:text="Lihat"
+                    android:text="@string/btCARD_PELANGGAN_LIHAT"
                     android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
                     android:textAllCaps="false"/>
             </LinearLayout>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
