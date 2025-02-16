@@ -20,11 +20,11 @@
                 android:id="@+id/tvCARD_PELANGGAN_ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#344CB7"
+                android:padding="10dp"
                 android:text="@string/tvCARD_PELANGGAN_ID"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"/>
+                android:textColor="#C5CAE9"
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/tvCARD_PELANGGAN_NAMA"
                 android:layout_width="match_parent"
@@ -34,20 +34,32 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
-            <TextView
-                android:id="@+id/tvCARD_PELANGGAN_ALAMAT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tvCARD_PELANGGAN_ALAMAT"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"/>
+
             <TextView
                 android:id="@+id/tvCARD_PELANGGAN_NOHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/etTAMBAH_NOHP_PELANGGAN"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/tvCARD_PELANGGAN_TERDAFTAR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvCARD_PELANGGAN_TERDAFTAR"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/tvCARD_PELANGGAN_ALAMAT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvCARD_PELANGGAN_ALAMAT"
                 android:textSize="14sp"
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="15dp"
@@ -59,22 +71,26 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btCARD_PELANGGAN_HUBUNGI"
+                    android:id="@+id/btHUBUNGI"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/btCARD_PELANGGAN_HUBUNGI"
-                    android:textSize="15sp"
+                    android:text="@string/btHUBUNGI"
+                    android:backgroundTint="#77B254"
+                    android:textSize="14sp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="5dp"
                     android:textAllCaps="false"/>
                 <Button
-                    android:id="@+id/btCARD_PELANGGAN_LIHAT"
+                    android:id="@+id/btLIHAT"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/btCARD_PELANGGAN_LIHAT"
-                    android:textSize="15sp"
+                    android:text="@string/btLIHAT"
+                    android:backgroundTint="#FF9D23"
+                    android:textSize="14sp"
                     android:layout_marginStart="15dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="15dp"
                     android:textAllCaps="false"/>

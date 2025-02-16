@@ -20,11 +20,11 @@
                 android:id="@+id/tvCARD_PEGAWAI_ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#344CB7"
+                android:padding="10dp"
                 android:text="@string/tvCARD_PEGAWAI_ID"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"/>
+                android:textColor="#C5CAE9"
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/tvCARD_PEGAWAI_NAMA"
                 android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 android:layout_marginEnd="15dp"/>
 
             <TextView
-                android:id="@+id/tvCARD_PEGAWAI_JABATAN"
+                android:id="@+id/tvCARD_PEGAWAI_TERDAFTAR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tvCARD_PEGAWAI_JABATAN"
@@ -79,20 +79,22 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btCARD_PEGAWAI_HUBUNGI"
+                    android:id="@+id/btHUBUNGI"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/btCARD_PEGAWAI_HUBUNGI"
+                    android:text="@string/btHUBUNGI"
+                    android:backgroundTint="#77B254"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:textAllCaps="false"/>
                 <Button
-                    android:id="@+id/btCARD_PEGAWAI_LIHAT"
+                    android:id="@+id/btLIHAT"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/btCARD_PEGAWAI_LIHAT"
+                    android:text="@string/btLIHAT"
+                    android:backgroundTint="#FF9D23"
                     android:textSize="14sp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="8dp"

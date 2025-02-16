@@ -130,10 +130,10 @@
         android:layout_marginEnd="15dp"
         android:background="@drawable/border"/>
     <Button
-        android:id="@+id/btTAMBAH_SIMPAN_PELANGGAN"
+        android:id="@+id/btSIMPAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btTAMBAH_SIMPAN_PELANGGAN"
+        android:text="@string/btSIMPAN"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etTAMBAH_CABANG_PELANGGAN"
         app:layout_constraintEnd_toEndOf="parent"

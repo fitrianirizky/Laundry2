@@ -17,74 +17,72 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvNO_CABANG"
+            android:id="@+id/tvCARD_CABANG_ID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No Cabang"
+            android:text="id Cabang"
             android:textSize="14sp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="5dp"
-            android:layout_margin="5dp"/>
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
         <TextView
-            android:id="@+id/tvNAMA_CABANG"
+            android:id="@+id/tvCARD_CABANG_NAMA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nama Cabang"
             android:textSize="16sp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="5dp"
-            android:layout_margin="5dp"/>
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
         <TextView
-            android:id="@+id/tvALAMAT"
+            android:id="@+id/tvCARD_CABANG_ALAMAT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Alamat Lengkap"
-            android:textSize="15sp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="5dp"
-            android:layout_margin="5dp"/>
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
 
         <TextView
-            android:id="@+id/tvJAM_OPERASIONAL"
+            android:id="@+id/tvCARD_CABANG_JAM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Jam Operasional"
-            android:textSize="15sp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="5dp"
-            android:layout_margin="5dp"/>
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
 
         <TextView
-            android:id="@+id/tvNO_HP"
+            android:id="@+id/tvCARD_CABANG_NOHP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No Telepon Cabang"
-            android:textSize="15sp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="5dp"
-            android:layout_margin="5dp"/>
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
 
         <TextView
-            android:id="@+id/tvLAYANAN"
+            android:id="@+id/tvCARD_CABANG_LAYANAN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Layanan Cabang"
-            android:textSize="15sp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="5dp"
-            android:layout_margin="5dp"/>
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/tvCARD_CABANG_MANAGER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kepala Cabang"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,26 +90,24 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="190dp"
+                android:id="@+id/btHUBUNGI"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:text="Hubungi"
-                android:textSize="15sp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="5dp"
-                android:layout_margin="5dp"
+                android:text="@string/btHUBUNGI"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
                 android:textAllCaps="false"/>
             <Button
-                android:layout_width="190dp"
+                android:id="@+id/btLIHAT"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:text="Lihat"
-                android:textSize="15sp"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="5dp"
-                android:layout_margin="5dp"
+                android:text="@string/btLIHAT"
+                android:textSize="14sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="15dp"
                 android:textAllCaps="false"/>
         </LinearLayout>
     </LinearLayout>

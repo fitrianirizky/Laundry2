@@ -20,111 +20,39 @@
                     android:id="@+id/tvCARD_LAYANAN_ID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ID Pelanggan"
-                    android:textSize="14sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
+                    android:background="#D91656"
+                    android:padding="10dp"
+                    android:text="@string/tvCARD_LAYANAN_ID"
+                    android:textColor="#F5F5F5"
+                    android:textSize="14sp" />
                 <TextView
-                    android:id="@+id/tvNAMA_PELANGGAN"
+                    android:id="@+id/tvCARD_LAYANAN_NAMA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Pelanggan"
+                    android:text="@string/tvCARD_LAYANAN_NAMA"
                     android:textSize="16sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
                 <TextView
-                    android:id="@+id/tvNO_HP"
+                    android:id="@+id/tvCARD_LAYANAN_HARGA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="No HP"
-                    android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
+                    android:text="@string/tvCARD_LAYANAN_HARGA"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
                 <TextView
-                    android:id="@+id/tvLayanan_Utama"
+                    android:id="@+id/tvCARD_LAYANAN_CABANG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Layanan Utama"
-                    android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
-
-                <TextView
-                    android:id="@+id/tvPilihan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pilihan Ekstra"
-                    android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
-
-                <TextView
-                    android:id="@+id/tvJenis_Barang"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Jenis Barang"
-                    android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
-
-                <TextView
-                    android:id="@+id/tvStatus_Pesanan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Status Pesanan"
-                    android:textSize="15sp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="5dp"
-                    android:layout_margin="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:layout_width="190dp"
-                        android:layout_height="wrap_content"
-                        android:text="Hubungi"
-                        android:textSize="15sp"
-                        android:paddingStart="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="5dp"
-                        android:layout_margin="5dp"
-                        android:textAllCaps="false"/>
-                    <Button
-                        android:layout_width="190dp"
-                        android:layout_height="wrap_content"
-                        android:text="Lihat"
-                        android:textSize="15sp"
-                        android:paddingStart="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="5dp"
-                        android:layout_margin="5dp"
-                        android:textAllCaps="false"/>
-                </LinearLayout>
+                    android:text="@string/tvCARD_LAYANAN_CABANG"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

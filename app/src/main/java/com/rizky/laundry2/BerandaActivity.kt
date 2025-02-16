@@ -21,12 +21,15 @@ import java.time.format.DateTimeFormatter
 class BerandaActivity : AppCompatActivity() {
     lateinit var tvSapa : TextView
     lateinit var tvTanggal : TextView
+    lateinit var ivPelanggan : ImageView
+    lateinit var cvPegawai : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_beranda)
         init()
+        pencet()
         tvSapa.text = getGreeting()
         tvTanggal.text = getCurrentDate()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -38,7 +41,19 @@ class BerandaActivity : AppCompatActivity() {
     fun init(){
         tvSapa=findViewById(R.id.tvSapa)
         tvTanggal=findViewById(R.id.tvTanggal)
+        cvPegawai=findViewById(R.id.cvPegawai)
+        ivPelanggan=findViewById(R.id.ivPelanggan)
+    }
 
+    fun pencet() {
+        cvPegawai.setOnClickListener {
+            val intent = Intent(this@BerandaActivity, DataPegawaiActivity::class.java)
+            startActivity(intent)
+        }
+        ivPelanggan.setOnClickListener {
+            val intent = Intent(this@BerandaActivity, DataPelangganActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun getGreeting(): String{
