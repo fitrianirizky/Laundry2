@@ -95,6 +95,13 @@
     <string name="validasi_noHP_pelanggan">validasi noHP pelanggan</string>
     <string name="validasi_cabang_pelanggan">validasi cabang pelanggan</string>
     <string name="sukses_simpan_pelanggan">sukses simpan pelanggan</string>
+    <string name="validasi_nama_pegawai">validasi nama pegawai</string>
+    <string name="validasi_alamat_pegawai">alamat tidak boleh kosong</string>
+    <string name="validasi_noHP_pegawai">no HP tidak boleh kosong</string>
+    <string name="validasi_cabang_pegawai">cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_pegawai">sukses simpan pegawai</string>
+    <string name="gagal_simpan_pegawai">gagal simpan pegawai</string>
+    <string name="gagal_simpan_pelanggan">gagal simpan pelanggan</string>
 
 
 </resources>

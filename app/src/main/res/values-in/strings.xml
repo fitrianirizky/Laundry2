@@ -70,4 +70,11 @@
     <string name="validasi_noHP_pelanggan">No HP tidak boleh kosong</string>
     <string name="validasi_cabang_pelanggan">Cabang tidak boleh kosong</string>
     <string name="sukses_simpan_pelanggan">Sukses Simpan Pelanggan</string>
+    <string name="validasi_nama_pegawai">Name can\'t be empty</string>
+    <string name="validasi_alamat_pegawai">Alamat tidak boleh kosong</string>
+    <string name="validasi_noHP_pegawai">No HP tidak boleh kosong</string>
+    <string name="validasi_cabang_pegawai">Cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_pegawai">Sukses Simpan Pegawai</string>
+    <string name="gagal_simpan_pegawai">Gagal simpan pegawai</string>
+    <string name="gagal_simpan_pelanggan">Gagal simpan pelanggan</string>
 </resources>

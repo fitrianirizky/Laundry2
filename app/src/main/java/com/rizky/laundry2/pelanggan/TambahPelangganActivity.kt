@@ -98,7 +98,7 @@ class TambahPelangganActivity : AppCompatActivity() {
             etTAMBAH_ALAMAT_PELANGGAN.text.toString(),
             etTAMBAH_NOHP_PELANGGAN.text.toString(),
             etTAMBAH_CABANG_PELANGGAN.text.toString(),
-            //"timestamp"
+            "timestamp"
         )
         pelangganBaru.setValue(data)
             .addOnSuccessListener {
@@ -106,7 +106,7 @@ class TambahPelangganActivity : AppCompatActivity() {
                 finish()
             }
             .addOnFailureListener {
-                Toast.makeText(this@TambahPelangganActivity, this.getString(R.string.sukses_simpan_pelanggan), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@TambahPelangganActivity, this.getString(R.string.gagal_simpan_pelanggan), Toast.LENGTH_SHORT).show()
             }
     }
 

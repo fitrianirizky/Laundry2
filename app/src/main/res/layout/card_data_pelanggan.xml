@@ -72,7 +72,7 @@
 
                 <Button
                     android:id="@+id/btHUBUNGI"
-                    android:layout_width="170dp"
+                    android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="@string/btHUBUNGI"
                     android:backgroundTint="#77B254"
@@ -80,11 +80,11 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
-                    android:layout_marginEnd="5dp"
+                    android:layout_marginEnd="15dp"
                     android:textAllCaps="false"/>
                 <Button
                     android:id="@+id/btLIHAT"
-                    android:layout_width="170dp"
+                    android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="@string/btLIHAT"
                     android:backgroundTint="#FF9D23"
