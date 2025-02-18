@@ -102,6 +102,11 @@
     <string name="sukses_simpan_pegawai">sukses simpan pegawai</string>
     <string name="gagal_simpan_pegawai">gagal simpan pegawai</string>
     <string name="gagal_simpan_pelanggan">gagal simpan pelanggan</string>
+    <string name="validasi_nama_layanan">nama layanan tidak boleh kosong</string>
+    <string name="validasi_harga_layanan">harga tidak boleh kosong</string>
+    <string name="validasi_nama_cabang">nama cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_layanan">sukses simpan layanan</string>
+    <string name="gagal_simpan_layanan">gagal simpan layanan</string>
 
 
 </resources>

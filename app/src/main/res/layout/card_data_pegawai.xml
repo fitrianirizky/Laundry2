@@ -70,7 +70,7 @@
 
                 <Button
                     android:id="@+id/btHUBUNGI"
-                    android:layout_width="170dp"
+                    android:layout_width="145dp"
                     android:layout_height="wrap_content"
                     android:text="@string/btHUBUNGI"
                     android:backgroundTint="#77B254"
@@ -81,7 +81,7 @@
                     android:textAllCaps="false"/>
                 <Button
                     android:id="@+id/btLIHAT"
-                    android:layout_width="170dp"
+                    android:layout_width="145dp"
                     android:layout_height="wrap_content"
                     android:text="@string/btLIHAT"
                     android:backgroundTint="#FF9D23"

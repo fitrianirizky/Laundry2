@@ -16,9 +16,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.rizky.laundry2.R
 import com.rizky.laundry2.adapter.DataPelangganAdapter
-import com.rizky.laundry2.cabang.TambahCabangActivity
 import com.rizky.laundry2.modeldata.ModelPelanggan
-import com.rizky.laundry2.pegawai.TambahPegawaiActivity
+
 
 class DataPelangganActivity : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -53,7 +52,7 @@ class DataPelangganActivity : AppCompatActivity() {
     }
 
     fun getData(){
-        val query = myRef.orderByChild("pelanggan").limitToLast(100)
+        val query = myRef.orderByChild("idpelanggan").limitToLast(100)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){

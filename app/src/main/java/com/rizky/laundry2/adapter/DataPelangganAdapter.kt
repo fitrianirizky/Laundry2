@@ -1,4 +1,5 @@
 package com.rizky.laundry2.adapter
+
 import com.rizky.laundry2.R
 import android.view.LayoutInflater
 import android.view.View

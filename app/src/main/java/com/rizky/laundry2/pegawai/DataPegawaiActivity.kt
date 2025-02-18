@@ -52,7 +52,7 @@ class DataPegawaiActivity : AppCompatActivity() {
     }
 
     fun getData(){
-        val query = myRef.orderByChild("pegawai").limitToLast(100)
+        val query = myRef.orderByChild("idpegawai").limitToLast(100)
         query.addValueEventListener(object  : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){

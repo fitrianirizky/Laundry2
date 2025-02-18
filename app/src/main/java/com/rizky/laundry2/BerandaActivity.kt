@@ -23,6 +23,7 @@ class BerandaActivity : AppCompatActivity() {
     lateinit var tvTanggal : TextView
     lateinit var ivPelanggan : ImageView
     lateinit var cvPegawai : CardView
+    lateinit var cvLayanan : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +44,7 @@ class BerandaActivity : AppCompatActivity() {
         tvTanggal=findViewById(R.id.tvTanggal)
         cvPegawai=findViewById(R.id.cvPegawai)
         ivPelanggan=findViewById(R.id.ivPelanggan)
+        cvLayanan=findViewById(R.id.cvLayanan)
     }
 
     fun pencet() {
@@ -52,6 +54,11 @@ class BerandaActivity : AppCompatActivity() {
         }
         ivPelanggan.setOnClickListener {
             val intent = Intent(this@BerandaActivity, DataPelangganActivity::class.java)
+            startActivity(intent)
+        }
+
+        cvLayanan.setOnClickListener {
+            val intent = Intent(this@BerandaActivity, DataLayananActivity::class.java)
             startActivity(intent)
         }
     }

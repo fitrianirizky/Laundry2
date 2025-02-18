@@ -77,4 +77,9 @@
     <string name="sukses_simpan_pegawai">Sukses Simpan Pegawai</string>
     <string name="gagal_simpan_pegawai">Gagal simpan pegawai</string>
     <string name="gagal_simpan_pelanggan">Gagal simpan pelanggan</string>
+    <string name="validasi_nama_layanan">Nama Layanan tidak boleh kosong</string>
+    <string name="validasi_harga_layanan">Harga tidak boleh kosong</string>
+    <string name="validasi_nama_cabang">Nama Cabang tidak boleh kosong</string>
+    <string name="sukses_simpan_layanan">Sukses simpan layanan</string>
+    <string name="gagal_simpan_layanan">Gagal simpan layanan</string>
 </resources>
