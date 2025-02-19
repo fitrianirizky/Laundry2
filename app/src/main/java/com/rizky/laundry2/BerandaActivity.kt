@@ -66,10 +66,10 @@ class BerandaActivity : AppCompatActivity() {
     fun getGreeting(): String{
         val currentHour = java.time.LocalTime.now().hour
         return when (currentHour) {
-            in 5..11-> "Selamat Pagi, Rizky"
-            in 12..15-> "Selamat Siang, Rizky"
-            in 16..18-> "Selamat Sore, Rizky"
-            else -> "Selamat Malam, Rizky"
+            in 5..11-> getString(R.string.SelamatPagi)
+            in 12..15-> getString(R.string.Selamatsiang)
+            in 16..18-> getString(R.string.SelamatSore)
+            else -> getString(R.string.SelamatMalam)
         }
     }
 

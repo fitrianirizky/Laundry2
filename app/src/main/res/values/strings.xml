@@ -107,6 +107,11 @@
     <string name="validasi_nama_cabang">nama cabang tidak boleh kosong</string>
     <string name="sukses_simpan_layanan">sukses simpan layanan</string>
     <string name="gagal_simpan_layanan">gagal simpan layanan</string>
+    <string name="tvCARD_PEGAWAI_TERDAFTAR">Terdaftar</string>
+    <string name="SelamatPagi">Selamat Pagi</string>
+    <string name="Selamatsiang">SelamatSiang</string>
+    <string name="SelamatSore">SelamatSore</string>
+    <string name="SelamatMalam">Selamat Malam</string>
 
 
 </resources>

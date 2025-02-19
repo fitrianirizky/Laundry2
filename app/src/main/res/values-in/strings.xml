@@ -82,4 +82,9 @@
     <string name="validasi_nama_cabang">Nama Cabang tidak boleh kosong</string>
     <string name="sukses_simpan_layanan">Sukses simpan layanan</string>
     <string name="gagal_simpan_layanan">Gagal simpan layanan</string>
+    <string name="tvCARD_PEGAWAI_TERDAFTAR">Terdaftar</string>
+    <string name="SelamatPagi">Selamat Pagi,Rizky</string>
+    <string name="Selamatsiang">Selamat Siang, Rizky</string>
+    <string name="SelamatSore">Selamat Sore, Rizky</string>
+    <string name="SelamatMalam">Selamat Malam, Rizky</string>
 </resources>

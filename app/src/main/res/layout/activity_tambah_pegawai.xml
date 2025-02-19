@@ -47,7 +47,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/border"/>
+        android:background="@drawable/border"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/tvAlamat"
@@ -74,7 +75,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"/>
+        android:layout_marginEnd="15dp"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/tvNo_HP"
@@ -101,7 +103,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"/>
+        android:layout_marginEnd="15dp"
+        android:inputType="phone"/>
 
     <TextView
         android:id="@+id/tvCabang"
@@ -128,7 +131,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"/>
+        android:layout_marginEnd="15dp"
+        android:inputType="text"/>
 
     <Button
         android:id="@+id/btSIMPAN"
