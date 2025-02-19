@@ -69,7 +69,7 @@ class TambahLayananActivity : AppCompatActivity() {
             return
         }
 
-        if (layanan.isEmpty()){
+        if (cabang.isEmpty()){
             etNama_Cabang.error=this.getString(R.string.validasi_nama_cabang)
             Toast.makeText(this@TambahLayananActivity, this.getString(R.string.validasi_nama_cabang), Toast.LENGTH_SHORT).show()
             etNama_Cabang.requestFocus()
@@ -82,7 +82,7 @@ class TambahLayananActivity : AppCompatActivity() {
         val layananBaru = myRef.push()
         val layananId = layananBaru.key
         val data = ModelLayanan(
-            layananId ?: "",
+            layananId.toString(),
             etLayanan_Nama.text.toString(),
             etLayanan_Harga.text.toString(),
             etNama_Cabang.text.toString(),
