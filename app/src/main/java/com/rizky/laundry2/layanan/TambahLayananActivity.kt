@@ -24,11 +24,15 @@ class TambahLayananActivity : AppCompatActivity() {
     lateinit var tvNama_Cabang: TextView
     lateinit var etNama_Cabang: EditText
     lateinit var btSIMPAN: Button
+
+    var idLayanan: String=""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_layanan)
         init()
+        getData()
         btSIMPAN.setOnClickListener {
             cekValidasi()
         }
@@ -50,10 +54,45 @@ class TambahLayananActivity : AppCompatActivity() {
         btSIMPAN = findViewById(R.id.btSIMPAN)
     }
 
+    fun getData(){
+        idLayanan = intent.getStringExtra("idLayanan").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaLayanan")
+        val harga = intent.getStringExtra("hargaLayanan")
+        val cabang = intent.getStringExtra("namaCabang")
+        tvTambah_Layanan.text = judul
+        etLayanan_Nama.setText(nama)
+        etLayanan_Harga.setText(harga)
+        etNama_Cabang.setText(cabang)
+        if (!tvTambah_Layanan.text.equals(this.getString(R.string.tvTambah_Layanan))){
+            if (judul.equals(getString(R.string.EditLayanan))){
+                mati()
+                btSIMPAN.text=getString(R.string.Sunting)
+            }
+        }else{
+            hidup()
+            etLayanan_Nama.requestFocus()
+            btSIMPAN.text=getString(R.string.simpan)
+        }
+    }
+
+    fun mati(){
+        etLayanan_Nama.isEnabled=false
+        etLayanan_Harga.isEnabled=false
+        etNama_Cabang.isEnabled=false
+    }
+
+    fun hidup(){
+        etLayanan_Nama.isEnabled=true
+        etLayanan_Harga.isEnabled=true
+        etNama_Cabang.isEnabled=true
+    }
+
     fun cekValidasi(){
         val layanan = etLayanan_Nama.text.toString()
         val harga = etLayanan_Harga.text.toString()
         val cabang = etNama_Cabang.text.toString()
+
         //validasi data
         if (layanan.isEmpty()){
             etLayanan_Nama.error=this.getString(R.string.validasi_nama_layanan)
@@ -75,7 +114,37 @@ class TambahLayananActivity : AppCompatActivity() {
             etNama_Cabang.requestFocus()
             return
         }
-        simpan()
+        if (btSIMPAN.text.equals(getString(R.string.simpan))){
+            simpan()
+        }else if (btSIMPAN.text.equals(getString(R.string.Sunting))){
+            hidup()
+            etLayanan_Nama.requestFocus()
+            btSIMPAN.text=getString(R.string.perbarui)
+        }else if (btSIMPAN.text.equals(getString(R.string.perbarui))){
+            update()
+        }
+    }
+
+    fun update(){
+        val layananRef = database.getReference("layanan").child(idLayanan)
+        val data = ModelLayanan(
+            idLayanan,
+            etLayanan_Nama.text.toString(),
+            etLayanan_Harga.toString(),
+            etNama_Cabang.toString()
+        )
+
+        //Buat Map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaLayanan"] = data.namaLayanan.toString()
+        updateData["hargaLayanan"] = data.hargaLayanan.toString()
+        updateData["namaCabang"] = data.namaCabang.toString()
+        layananRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this@TambahLayananActivity, getString(R.string.sukses_update_layanan), Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this@TambahLayananActivity, getString(R.string.gagal_update_layanan), Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun simpan(){
@@ -86,7 +155,6 @@ class TambahLayananActivity : AppCompatActivity() {
             etLayanan_Nama.text.toString(),
             etLayanan_Harga.text.toString(),
             etNama_Cabang.text.toString(),
-            "timestamp"
         )
         layananBaru.setValue(data)
             .addOnSuccessListener {

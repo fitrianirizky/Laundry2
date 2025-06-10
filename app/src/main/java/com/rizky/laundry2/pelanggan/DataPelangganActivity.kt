@@ -39,6 +39,16 @@ class DataPelangganActivity : AppCompatActivity() {
         pelangganList = arrayListOf<ModelPelanggan>()
         getData()
         pencet()
+        fbDATA_PELANGGAN.setOnClickListener {
+            val intent = Intent(this, TambahPelangganActivity::class.java)
+            intent.putExtra("judul", this.getString(R.string.tvTAMBAH_PELANGGAN))
+            intent.putExtra("idPelanggan", "")
+            intent.putExtra(" namaPelanggan", "")
+            intent.putExtra("alamatPelanggan", "")
+            intent.putExtra("noHPPelanggan", "")
+            intent.putExtra("idCabang", "")
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -52,14 +62,14 @@ class DataPelangganActivity : AppCompatActivity() {
     }
 
     fun getData(){
-        val query = myRef.orderByChild("idpelanggan").limitToLast(100)
+        val query = myRef.orderByChild("idPelanggan").limitToLast(100)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
                     pelangganList.clear()
                     for (dataSnapshot in snapshot.children){
-                        val pegawai = dataSnapshot.getValue(ModelPelanggan::class.java)
-                        pelangganList.add(pegawai!!)
+                        val pelanggan= dataSnapshot.getValue(ModelPelanggan::class.java)
+                        pelangganList.add(pelanggan!!)
                     }
                     val adapter = DataPelangganAdapter(pelangganList)
                     rvDATA_PELANGGAN.adapter = adapter
@@ -68,7 +78,7 @@ class DataPelangganActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@DataPelangganActivity, error.message, Toast.LENGTH_SHORT)
+                Toast.makeText(this@DataPelangganActivity, error.message, Toast.LENGTH_SHORT).show()
             }
         })
     }

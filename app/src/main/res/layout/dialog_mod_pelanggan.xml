@@ -32,32 +32,187 @@
                     android:paddingEnd="10dp"
                     android:paddingBottom="5dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    android:text="Detail Pelanggan"/>
+                    android:text="@string/DetailPelanggan"
+                    android:textSize="20sp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal|center_vertical"
                     android:background="?android:attr/colorButtonNormal"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="4dp">
                     <TextView
                         android:id="@+id/tvjudul3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Id Pelanggan"
+                        android:text="@string/tvCARD_PELANGGAN_ID"
+                        android:textSize="18sp"
                         android:layout_weight="1.35"/>
                     <TextView
                         android:id="@+id/tvjudul4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Id Pelanggan"
-                        android:layout_weight="1.35"/>
+                        android:text="@string/tvCARD_PELANGGAN_ID"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"
+                        android:textAlignment="textEnd"/>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/tvjudul5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/NamaPelanggan"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvjudul6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/NamaPelanggan"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="?android:attr/colorButtonNormal"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/tvjudul7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvAlamat"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvjudul8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvAlamat"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"
+                        android:textAlignment="textEnd"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/tvjudul9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/NoHP"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvjudul10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/NoHP"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="?android:attr/colorButtonNormal"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/tvjudul11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvCabang"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvjudul12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvCabang"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    <TextView
+                        android:id="@+id/tvjudul13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Terdaftar"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"/>
+                    <TextView
+                        android:id="@+id/tvjudul14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Terdaftar"
+                        android:textSize="18sp"
+                        android:layout_weight="1.35"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btDIALOG_MOD_PELANGGAN_EDIT"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="3dp"
+                        android:backgroundTint="#FF9D23"
+                        android:text="Sunting"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btDIALOG_MOD_PELANGGAN_HAPUS"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textAllCaps="false"/>
+
+                    <Button
+                        android:id="@+id/btDIALOG_MOD_PELANGGAN_HAPUS"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="3dp"
+                        android:backgroundTint="#E52020"
+                        android:text="@string/Hapus"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btDIALOG_MOD_PELANGGAN_EDIT"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textAllCaps="false"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

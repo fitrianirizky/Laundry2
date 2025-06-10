@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvCARD_TAMBAHAN"
         app:cardCornerRadius="15dp"
         android:layout_margin="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_marginTop="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,69 +17,52 @@
                 android:id="@+id/tvCARD_TAMBAHAN_ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tvCARD_TAMBAHAN_ID"
-                android:textSize="14sp"
+                android:background="#705C53"
                 android:padding="10dp"
-                android:background="#344CB7"
-                android:textColor="#C5CAE9"/>
+                android:text="@string/tvCARD_TAMBAHAN_ID"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/tvCARD_TAMBAHAN_NAMA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tvCARD_TAMBAHAN_NAMA"
-                android:textSize="16sp"
-                android:layout_marginTop="15dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
 
             <TextView
-                android:id="@+id/tvCARD_TAMBAHAN_NOHP"
+                android:id="@+id/tvCARD_TAMBAHAN_HARGA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tvCARD_TAMBAHAN_NOHP"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
+                android:text="@string/tvCARD_TAMBAHAN_HARGA"
+                android:textSize="20sp"
+                android:layout_marginTop="6dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
 
             <TextView
-                android:id="@+id/tvCARD_TAMBAHAN_TAMBAHAN"
+                android:id="@+id/tvCARD_TAMBAHAN_CABANG"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tambahan"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
+                android:text="@string/tvCARD_TAMBAHAN_CABANG"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"/>
+                android:layout_marginEnd="15dp" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvCARD_TAMBAHAN_STATUS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btHUBUNGI"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btHUBUNGI"
-                    android:backgroundTint="#77B254"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="5dp"
-                    android:textAllCaps="false"/>
-                <Button
-                    android:id="@+id/btLIHAT"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btLIHAT"
-                    android:backgroundTint="#FF9D23"
-                    android:textSize="14sp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="15dp"
-                    android:textAllCaps="false"/>
-            </LinearLayout>
+                android:text="@string/tvCARD_TAMBAHAN_STATUS"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="8dp"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

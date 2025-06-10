@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Pembayaran"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/tvMetodePembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_metode_pembayaran"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPembayaran"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/vGaris"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMetodePembayaran"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/LinLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vGaris"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <Button
+            android:id="@+id/btBayarNanti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bayar_nanti"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="#CD8D7A"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btTunai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tunai"
+            android:backgroundTint="#659287"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btQris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QRIS"
+            android:textSize="18sp"
+            android:backgroundTint="#F39E60"
+            android:textColor="@color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btDana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DANA"
+            android:textSize="18sp"
+            android:backgroundTint="#7EACB5"
+            android:textColor="@color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btGoPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GoPay"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="#FFB996"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btOvo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OVO"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="#AC87C5"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBatal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Batal"
+        android:textSize="20sp"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinLay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

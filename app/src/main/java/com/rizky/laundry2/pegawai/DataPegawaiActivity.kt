@@ -1,5 +1,6 @@
 package com.rizky.laundry2.pegawai
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -16,7 +17,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.rizky.laundry2.R
 import com.rizky.laundry2.adapter.DataPegawaiAdapter
-import com.rizky.laundry2.cabang.TambahCabangActivity
 import com.rizky.laundry2.modeldata.ModelPegawai
 
 class DataPegawaiActivity : AppCompatActivity() {
@@ -26,6 +26,7 @@ class DataPegawaiActivity : AppCompatActivity() {
     lateinit var fbDATA_PEGAWAI : FloatingActionButton
     lateinit var pegawaiList: ArrayList<ModelPegawai>
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -39,6 +40,16 @@ class DataPegawaiActivity : AppCompatActivity() {
         pegawaiList = arrayListOf<ModelPegawai>()
         getData()
         pencet()
+        fbDATA_PEGAWAI.setOnClickListener {
+            val intent = Intent(this, TambahPegawaiActivity::class.java)
+            intent.putExtra("judul", this.getString(R.string.tvTambah_Pegawai))
+            intent.putExtra("idPegawai", "")
+            intent.putExtra("namaPegawai", "")
+            intent.putExtra("noHPPegawai", "")
+            intent.putExtra("alamatPegawai", "")
+            intent.putExtra("cabangPegawai", "")
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -52,7 +63,7 @@ class DataPegawaiActivity : AppCompatActivity() {
     }
 
     fun getData(){
-        val query = myRef.orderByChild("idpegawai").limitToLast(100)
+        val query = myRef.orderByChild("pegawai").limitToLast(100)
         query.addValueEventListener(object  : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){

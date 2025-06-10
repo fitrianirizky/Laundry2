@@ -20,18 +20,19 @@
                     android:id="@+id/tvCARD_LAYANAN_ID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#D91656"
+                    android:background="#FF7171"
                     android:padding="10dp"
                     android:text="@string/tvCARD_LAYANAN_ID"
-                    android:textColor="#F5F5F5"
-                    android:textSize="14sp" />
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
                 <TextView
                     android:id="@+id/tvCARD_LAYANAN_NAMA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tvCARD_LAYANAN_NAMA"
-                    android:textSize="16sp"
-                    android:layout_marginTop="15dp"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"/>
                 <TextView
@@ -39,8 +40,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tvCARD_LAYANAN_HARGA"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"
+                    android:layout_marginTop="6dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"/>
                 <TextView
@@ -48,8 +49,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tvCARD_LAYANAN_CABANG"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"
+                    android:layout_marginTop="4dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="8dp"/>

@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tvTanggal"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="25dp"
         android:textStyle="bold"/>
 
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="10dp"
         android:textAlignment="textEnd"/>
@@ -41,14 +41,15 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSapa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:cardCornerRadius="18dp"
-        app:cardElevation="8dp">
+        app:cardElevation="8dp"
+        android:padding="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -90,80 +91,110 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvRupiah"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="#CCCCCC"/>
 
-            <ImageView
-                android:id="@+id/ivAkun"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/akun"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/vGaris"/>
-            <TextView
-                android:id="@+id/tvAkun"
-                android:layout_width="75dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAkun"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Akun"
-                android:textAlignment="center"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vGaris"
-                app:layout_constraintStart_toEndOf="@id/ivAkun"
-                />
+                app:layout_constraintEnd_toEndOf="parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/akun"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cvAkun"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:id="@+id/ivCabang"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/cabang"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivAkun"/>
-            <TextView
-                android:id="@+id/tvCabang"
-                android:layout_width="75dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCabang"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cabang"
-                android:textAlignment="center"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"
-                app:layout_constraintStart_toEndOf="@id/ivCabang"
-                app:layout_constraintTop_toBottomOf="@id/tvAkun"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvAkun"
+                app:layout_constraintEnd_toEndOf="parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/cabang"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cvCabang"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:id="@+id/ivPegawai"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/pegawai"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivCabang"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-            <TextView
-                android:id="@+id/tvPegawai"
-                android:layout_width="75dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPegawai"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pegawai"
-                android:textAlignment="center"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintStart_toEndOf="@id/ivPegawai"
-                app:layout_constraintTop_toBottomOf="@id/tvCabang"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvCabang"
+                app:layout_constraintEnd_toEndOf="parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/pegawai"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cvPegawai"
+                        android:textAlignment="center"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

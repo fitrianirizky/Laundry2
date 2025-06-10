@@ -10,7 +10,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDATA_CABANG"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:listitem="@layout/card_data_cabang">
     </androidx.recyclerview.widget.RecyclerView>
 
     <RelativeLayout

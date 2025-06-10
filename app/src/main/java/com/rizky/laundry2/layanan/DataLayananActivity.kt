@@ -19,6 +19,7 @@ import com.rizky.laundry2.adapter.DataLayananAdapter
 import com.rizky.laundry2.cabang.TambahCabangActivity
 import com.rizky.laundry2.modeldata.ModelLayanan
 import com.rizky.laundry2.modeldata.ModelPegawai
+import com.rizky.laundry2.pegawai.TambahPegawaiActivity
 
 class DataLayananActivity : AppCompatActivity() {
     val database = FirebaseDatabase.getInstance()
@@ -40,6 +41,15 @@ class DataLayananActivity : AppCompatActivity() {
         layananList = arrayListOf<ModelLayanan>()
         getData()
         pencet()
+        fbDATA_LAYANAN.setOnClickListener {
+            val intent = Intent(this, TambahLayananActivity::class.java)
+            intent.putExtra("judul", this.getString(R.string.tvTambah_Layanan))
+            intent.putExtra("idLayanan", "")
+            intent.putExtra(" namaLayanan", "")
+            intent.putExtra("hargaLayanan", "")
+            intent.putExtra("namaCabang", "")
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -53,7 +63,7 @@ class DataLayananActivity : AppCompatActivity() {
     }
 
     fun getData(){
-        val query = myRef.orderByChild("idlayanan").limitToLast(100)
+        val query = myRef.orderByChild("idLayanan").limitToLast(100)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){

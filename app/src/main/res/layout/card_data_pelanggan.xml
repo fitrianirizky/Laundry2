@@ -17,18 +17,19 @@
                 android:id="@+id/tvCARD_PELANGGAN_ID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#344CB7"
+                android:background="#7189BF"
                 android:padding="10dp"
                 android:text="@string/tvCARD_PELANGGAN_ID"
-                android:textColor="#C5CAE9"
-                android:textSize="14sp" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/tvCARD_PELANGGAN_NAMA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tvCARD_PELANGGAN_NAMA"
-                android:textSize="16sp"
-                android:layout_marginTop="15dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
 
@@ -36,9 +37,9 @@
                 android:id="@+id/tvCARD_PELANGGAN_NOHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/etTAMBAH_NOHP_PELANGGAN"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
+                android:text="@string/NoHP"
+                android:textSize="20sp"
+                android:layout_marginTop="6dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
 
@@ -47,8 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tvCARD_PELANGGAN_TERDAFTAR"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
 
@@ -58,40 +59,56 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tvCARD_PELANGGAN_ALAMAT"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/tvCARD_PELANGGAN_CABANG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvCabang"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"/>
 
             <LinearLayout
+                style="?android:attr/buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btHUBUNGI"
-                    android:layout_width="145dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btHUBUNGI"
-                    android:backgroundTint="#77B254"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
                     android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="15dp"
-                    android:textAllCaps="false"/>
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#7C96AB"
+                    android:text="@string/btHUBUNGI"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
                 <Button
                     android:id="@+id/btLIHAT"
-                    android:layout_width="145dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btLIHAT"
-                    android:backgroundTint="#FF9D23"
-                    android:textSize="14sp"
+                    android:layout_weight="1"
                     android:layout_marginStart="15dp"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="15dp"
-                    android:textAllCaps="false"/>
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#A59D84"
+                    android:text="@string/btLIHAT"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 

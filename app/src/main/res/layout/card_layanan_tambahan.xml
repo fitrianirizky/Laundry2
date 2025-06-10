@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvCARD_TAMBAHAN"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="5dp"
+    android:layout_marginTop="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCARD_TAMBAHAN_ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#705C53"
+            android:padding="10dp"
+            android:text="@string/tvCARD_TAMBAHAN_ID"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tvCARD_TAMBAHAN_NAMA"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCARD_TAMBAHAN_NAMA"
+            android:layout_below="@id/tvCARD_TAMBAHAN_ID"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCARD_TAMBAHAN_ID"
+            />
+
+        <TextView
+            android:id="@+id/tvCARD_TAMBAHAN_HARGA"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCARD_TAMBAHAN_HARGA"
+            android:layout_below="@id/tvCARD_TAMBAHAN_NAMA"
+            android:textSize="20sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCARD_TAMBAHAN_NAMA"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivTrash"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/trash"
+            android:contentDescription="Hapus"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/tvCARD_TAMBAHAN_NAMA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -26,11 +26,16 @@ class TambahPelangganActivity : AppCompatActivity() {
     lateinit var tvTAMBAH_CABANG_PELANGGAN : TextView
     lateinit var etTAMBAH_CABANG_PELANGGAN : EditText
     lateinit var btSIMPAN : Button
+
+    var idPelanggan: String=""
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_pelanggan)
         init()
+        getData()
         btSIMPAN.setOnClickListener {
             cekValidasi()
         }
@@ -55,11 +60,50 @@ class TambahPelangganActivity : AppCompatActivity() {
 
     }
 
+    fun getData(){
+        idPelanggan = intent.getStringExtra("idPelanggan").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaPelanggan")
+        val alamat = intent.getStringExtra("alamatPelanggan")
+        val hp = intent.getStringExtra("noHPPelanggan")
+        val cabang= intent.getStringExtra("idCabang")
+        tvTAMBAH_PELANGGAN.text = judul
+        etTAMBAH_NAMA_PELANGGAN.setText(nama)
+        etTAMBAH_ALAMAT_PELANGGAN.setText(alamat)
+        etTAMBAH_NOHP_PELANGGAN.setText(hp)
+        etTAMBAH_CABANG_PELANGGAN.setText(cabang)
+        if (!tvTAMBAH_PELANGGAN.text.equals(this.getString(R.string.tvTAMBAH_PELANGGAN))){
+            if (judul.equals(getString(R.string.EditPelanggan))){
+                mati()
+                btSIMPAN.text=getString(R.string.Sunting)
+            }
+        }else{
+            hidup()
+            etTAMBAH_NAMA_PELANGGAN.requestFocus()
+            btSIMPAN.text=getString(R.string.simpan)
+        }
+    }
+
+    fun mati(){
+        etTAMBAH_NAMA_PELANGGAN.isEnabled=false
+        etTAMBAH_ALAMAT_PELANGGAN.isEnabled=false
+        etTAMBAH_NOHP_PELANGGAN.isEnabled=false
+        etTAMBAH_CABANG_PELANGGAN.isEnabled=false
+    }
+
+    fun hidup(){
+        etTAMBAH_NAMA_PELANGGAN.isEnabled=true
+        etTAMBAH_ALAMAT_PELANGGAN.isEnabled=true
+        etTAMBAH_NOHP_PELANGGAN.isEnabled=true
+        etTAMBAH_CABANG_PELANGGAN.isEnabled=true
+    }
+
     fun cekValidasi(){
         val nama = etTAMBAH_NAMA_PELANGGAN.text.toString()
         val alamat = etTAMBAH_ALAMAT_PELANGGAN.text.toString()
         val noHP = etTAMBAH_NOHP_PELANGGAN.text.toString()
         val cabang = etTAMBAH_CABANG_PELANGGAN.text.toString()
+
         //validasi data
         if (nama.isEmpty()){
             etTAMBAH_NAMA_PELANGGAN.error=this.getString(R.string.validasi_nama_pelanggan)
@@ -86,19 +130,55 @@ class TambahPelangganActivity : AppCompatActivity() {
             etTAMBAH_CABANG_PELANGGAN.requestFocus()
             return
         }
-        simpan()
+        if (btSIMPAN.text.equals(getString(R.string.simpan))){
+            simpan()
+        }else if (btSIMPAN.text.equals(getString(R.string.Sunting))){
+            hidup()
+            etTAMBAH_NAMA_PELANGGAN.requestFocus()
+            btSIMPAN.text=getString(R.string.perbarui)
+        }else if (btSIMPAN.text.equals(getString(R.string.perbarui))) {
+            update()
+        }
+    }
+
+    fun update(){
+        val pelangganRef = database.getReference("pelanggan").child(idPelanggan)
+        val data =ModelPelanggan(
+            idPelanggan,
+            etTAMBAH_NAMA_PELANGGAN.text.toString(),
+            etTAMBAH_ALAMAT_PELANGGAN.text.toString(),
+            etTAMBAH_NOHP_PELANGGAN.text.toString(),
+            etTAMBAH_CABANG_PELANGGAN.text.toString(),
+            timestamp = System.currentTimeMillis()
+        )
+
+        //buat map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaPelanggan"] = data.namaPelanggan.toString()
+        updateData["alamatPelanggan"] = data.alamatPelanggan.toString()
+        updateData["noHPPelanggan"] = data.noHPPelanggan.toString()
+        updateData["idCabang"] = data.idCabang.toString()
+        pelangganRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this@TambahPelangganActivity, getString(R.string.sukses_update_pelanggan), Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this@TambahPelangganActivity, getString(R.string.gagal_update_pelanggan), Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun simpan(){
         val pelangganBaru = myRef.push()
         val pelangganId = pelangganBaru.key
+
         val data = ModelPelanggan(
             pelangganId ?: "",
             etTAMBAH_NAMA_PELANGGAN.text.toString(),
             etTAMBAH_ALAMAT_PELANGGAN.text.toString(),
             etTAMBAH_NOHP_PELANGGAN.text.toString(),
             etTAMBAH_CABANG_PELANGGAN.text.toString(),
-            "timestamp"
+            timestamp = System.currentTimeMillis()
+
+
         )
         pelangganBaru.setValue(data)
             .addOnSuccessListener {
@@ -106,7 +186,7 @@ class TambahPelangganActivity : AppCompatActivity() {
                 finish()
             }
             .addOnFailureListener {
-                Toast.makeText(this@TambahPelangganActivity, this.getString(R.string.gagal_simpan_pelanggan), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@TambahPelangganActivity, this.getString(R.string.sukses_simpan_pelanggan), Toast.LENGTH_SHORT).show()
             }
     }
 

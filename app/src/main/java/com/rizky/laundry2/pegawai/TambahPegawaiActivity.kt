@@ -26,11 +26,16 @@ class TambahPegawaiActivity : AppCompatActivity() {
     lateinit var tvCabang: TextView
     lateinit var etCabang: EditText
     lateinit var btSIMPAN : Button
+    
+    var idpegawai: String=""
+    
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_pegawai)
         init()
+        getData()
         btSIMPAN.setOnClickListener {
             cekValidasi()
         }
@@ -53,12 +58,51 @@ class TambahPegawaiActivity : AppCompatActivity() {
         etCabang = findViewById(R.id.etCabang)
         btSIMPAN = findViewById(R.id.btSIMPAN)
     }
+    
+    fun getData(){
+        idpegawai = intent.getStringExtra("idPegawai").toString()
+        val judul = intent.getStringExtra("judul")
+        val nama = intent.getStringExtra("namaPegawai")
+        val alamat = intent.getStringExtra("alamatPegawai")
+        val hp = intent.getStringExtra("noHPPegawai")
+        val cabang = intent.getStringExtra("cabangPegawai")
+        tvTambah_Pegawai.text = judul
+        etNama_Lengkap.setText(nama)
+        etAlamat.setText(alamat)
+        etNo_HP.setText(hp)
+        etCabang.setText(cabang)
+        if (!tvTambah_Pegawai.text.equals(this.getString(R.string.tvTambah_Pegawai))){
+            if (judul.equals(getString(R.string.EditPegawai))){
+                mati()
+                btSIMPAN.text=getString(R.string.Sunting)
+            }
+        }else{
+            hidup()
+            etNama_Lengkap.requestFocus()
+            btSIMPAN.text=getString(R.string.simpan)
+        }
+    }
+    
+    fun mati() {
+        etNama_Lengkap.isEnabled=false
+        etAlamat.isEnabled=false
+        etNo_HP.isEnabled=false
+        etCabang.isEnabled=false
+    }
 
+    fun hidup() {
+        etNama_Lengkap.isEnabled=true
+        etAlamat.isEnabled=true
+        etNo_HP.isEnabled=true
+        etCabang.isEnabled=true
+    }
+    
     fun cekValidasi(){
         val nama = etNama_Lengkap.text.toString()
         val alamat = etAlamat.text.toString()
         val noHP = etNo_HP.text.toString()
         val cabang = etCabang.text.toString()
+
         //validasi data
         if (nama.isEmpty()){
             etNama_Lengkap.error=this.getString(R.string.validasi_nama_pegawai)
@@ -87,19 +131,53 @@ class TambahPegawaiActivity : AppCompatActivity() {
             etCabang.requestFocus()
             return
         }
-        simpan()
+        if (btSIMPAN.text.equals(getString(R.string.simpan))){
+            simpan()
+        }else if (btSIMPAN.text.equals(getString(R.string.Sunting))){
+            hidup()
+            etNama_Lengkap.requestFocus()
+            btSIMPAN.text=getString(R.string.perbarui)
+        }else if (btSIMPAN.text.equals(getString(R.string.perbarui))){
+            update()
+        }
+    }
+
+    fun update(){
+        val pegawaiRef = database.getReference("pegawai").child(idpegawai)
+        val data =ModelPegawai(
+            idpegawai,
+            etNama_Lengkap.text.toString(),
+            etAlamat.text.toString(),
+            etNo_HP.text.toString(),
+            etCabang.text.toString(),
+            timestamp = System.currentTimeMillis()
+        )
+
+        //Buat Map untuk update data
+        val updateData = mutableMapOf<String, Any>()
+        updateData["namaPegawai"] = data.namaPegawai.toString()
+        updateData["alamatPegawai"] = data.alamatPegawai.toString()
+        updateData["noHPPegawai"] = data.noHPPegawai.toString()
+        updateData["cabangPegawai"] = data.cabangPegawai.toString()
+        pegawaiRef.updateChildren(updateData).addOnSuccessListener {
+            Toast.makeText(this@TambahPegawaiActivity, getString(R.string.sukses_update_pegawai), Toast.LENGTH_SHORT).show()
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this@TambahPegawaiActivity, getString(R.string.gagal_update_pegawai), Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun simpan(){
         val pegawaiBaru = myRef.push()
         val pegawaiId = pegawaiBaru.key
+
         val data = ModelPegawai(
             pegawaiId ?: "",
             etNama_Lengkap.text.toString(),
             etAlamat.text.toString(),
             etNo_HP.text.toString(),
             etCabang.text.toString(),
-            "timestamp"
+            timestamp = System.currentTimeMillis()
         )
         pegawaiBaru.setValue(data)
             .addOnSuccessListener {
